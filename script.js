@@ -17,3 +17,15 @@ function getPasswordStrength(password) {
     if (strength === 2) return 'Medium';
     if (strength === 3) return 'Strong';
 }
+
+// Function to perform Caesar cipher encryption or decryption
+function caesarCipher(text, shift) {
+    return text.split('').map(char => {
+        if (char.match(/[a-z]/i)) {
+            const charCode = char.charCodeAt(0);
+            const base = charCode >= 65 && charCode <= 90 ? 65 : 97; // Uppercase or lowercase
+            return String.fromCharCode(((charCode - base + shift) % 26 + 26) % 26 + base);
+        }
+        return char; // Non-alphabetic characters remain unchanged
+    }).join('');
+}
