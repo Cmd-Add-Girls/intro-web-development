@@ -1,0 +1,22 @@
+/* Add your CSS styles here */
+
+#passwordStrength {
+    height: 10px;
+    width: 100%;
+    background-color: lightgray;
+    margin-top: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+#passwordStrength::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 0%; /* Default width */
+    background-color: red; /* Default color */
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+
