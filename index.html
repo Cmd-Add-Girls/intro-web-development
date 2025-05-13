@@ -1,27 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>HTML Workshop Example</title>
-	<link rel="stylesheet" href="style.css">
+    <title>HackProof - Cybersecurity Tools</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Add a form for password strength checking -->
-    <form id="passwordForm">
-        <label for="password">Enter your password:</label>
-        <input type="password" id="password" name="password">
-        <div id="passwordStrength">Password strength will be displayed here.</div>
-    </form>
+    <header>
+        <h1>Welcome to HackProof</h1>
+        <p>Your one-stop solution for learning and practicing cybersecurity basics.</p>
+    </header>
 
-    <!-- Add inputs and buttons for encryption and decryption -->
-    <div id="encryptionTool">
-        <label for="textInput">Enter text:</label>
-        <input type="text" id="textInput" name="textInput">
+    <main>
+        <section id="intro">
+            <h2>About This Page</h2>
+            <p>HackProof provides tools to help you understand and improve your cybersecurity skills. Use our password strength checker to evaluate the security of your passwords and our Caesar cipher tool to encrypt or decrypt messages.</p>
+        </section>
 
-        <label for="shiftInput">Enter shift (number):</label>
-        <input type="number" id="shiftInput" name="shiftInput">
+        <section id="passwordChecker">
+            <h2>Password Strength Checker</h2>
+            <form id="passwordForm">
+                <label for="password">Enter your password:</label>
+                <input type="password" id="password" name="password">
+                <div id="passwordStrength">Password strength will be displayed here.</div>
+            </form>
+        </section>
 
-        <button id="encryptButton">Encrypt</button>
-        <button id="decryptButton">Decrypt</button>
-    </div>
+        <section id="encryptionTool">
+            <h2>Caesar Cipher Tool</h2>
+            <label for="textInput">Enter text:</label>
+            <input type="text" id="textInput" name="textInput">
+
+            <label for="shiftInput">Enter shift (number):</label>
+            <input type="number" id="shiftInput" name="shiftInput">
+
+            <button id="encryptButton">Encrypt</button>
+            <button id="decryptButton">Decrypt</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HackProof. All rights reserved.</p>
+    </footer>
 </body>
 </html>
