@@ -46,3 +46,18 @@ document.getElementById('password').addEventListener('input', function () {
         strengthDiv.style.color = 'green';
     }
 });
+
+// Add event listeners for Caesar cipher tool
+document.getElementById('encryptButton').addEventListener('click', function () {
+    const text = document.getElementById('textInput').value;
+    const shift = parseInt(document.getElementById('shiftInput').value, 10);
+    const result = caesarCipher(text, shift);
+    alert(`Encrypted Text: ${result}`);
+});
+
+document.getElementById('decryptButton').addEventListener('click', function () {
+    const text = document.getElementById('textInput').value;
+    const shift = parseInt(document.getElementById('shiftInput').value, 10);
+    const result = caesarCipher(text, -shift);
+    alert(`Decrypted Text: ${result}`);
+});

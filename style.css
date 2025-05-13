@@ -15,6 +15,7 @@ section {
     overflow: hidden;
     position: relative;
     font-weight: bold;
+    padding: 20px;
 }
 
 #passwordStrength::after {
