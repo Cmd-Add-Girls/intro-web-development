@@ -29,3 +29,20 @@ function caesarCipher(text, shift) {
         return char; // Non-alphabetic characters remain unchanged
     }).join('');
 }
+
+// Update password strength dynamically
+document.getElementById('password').addEventListener('input', function () {
+    const password = this.value;
+    const strength = getPasswordStrength(password);
+    const strengthDiv = document.getElementById('passwordStrength');
+
+    // Update the text and color based on strength
+    strengthDiv.textContent = `Strength: ${strength}`;
+    if (strength === 'Weak') {
+        strengthDiv.style.color = 'red';
+    } else if (strength === 'Medium') {
+        strengthDiv.style.color = 'orange';
+    } else if (strength === 'Strong') {
+        strengthDiv.style.color = 'green';
+    }
+});
